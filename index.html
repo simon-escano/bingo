@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/web-icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img id="logo" src="images/web-icon.svg">
+        <button id="createGame">CREATE GAME</button>
+    </header>
+    <main>
+        <div id="inputArea">
+            <div>
+                <input id="codeInput" type="text" placeholder="Enter game code">
+                <button id="getCard">Join</button>
+            </div>
+            <p id="errorMsg"></p>
+        </div>
+        <div id="gameBox">
+            <section id="gameCode">
+                <button id="openDashboard"></button>
+                <button id="changeCode">
+                    <img src="images/change.svg">
+                </button>
+            </section>
+            <div id="card">
+                <section id="letters">
+                    <div id="lblB">B</div>
+                    <div id="lblI">I</div>
+                    <div id="lblN">N</div>
+                    <div id="lblG">G</div>
+                    <div id="lblO">O</div>
+                </section>
+                <section id="numbers">
+                    <div id="colB"></div>
+                    <div id="colI"></div>
+                    <div id="colN"></div>
+                    <div id="colG"></div>
+                    <div id="colO"></div>
+                </section>
+            </div>
+            <section id="cardBtns">
+                <button id="checkCard" class="check-card">Check Card</button>
+                <button id="newCard">
+                    <img src="images/new.svg">
+                </button>
+            </section>
+        </div>
+    </main>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

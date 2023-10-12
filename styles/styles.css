@@ -1,0 +1,284 @@
+* {
+    font-family: Kanit;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body, html {
+    height: 100%;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    box-shadow: 5px 5px 15px #00000026;
+    color: white;
+    background-color: #474ead;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.25s;
+} button:hover {
+    background-color: #393f8f;
+}
+
+button img {
+    height: 40%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    background-color: #474ead;
+    width: 100%;
+    height: 70px;
+    box-shadow: 5px 5px 15px #00000026;
+} header img {
+    cursor: pointer;
+    aspect-ratio: 1;
+    height: 100%;
+} header button {
+    background-color: #5c74e0;
+    width: 150px;
+    font-size: 15px;
+    padding: 10px 20px;
+} header button:hover {
+    background-color: #4663e0;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../images/bg.png");
+}
+
+#inputArea {
+    position: fixed;
+    padding: 20px;
+    box-shadow: 5px 5px 15px #00000026;
+    background-color: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 400px;
+} #inputArea div {
+    display: flex;
+    width: 100%;
+}
+
+#codeInput {
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    box-shadow: inset 5px 5px 15px #00000026;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 70%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 20px;
+    padding-left: 30px;
+}
+
+#getCard {
+    width: 30%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#errorMsg {
+    opacity: 0;
+    position: absolute;
+    bottom: -50%;
+    background-color: #c25b5b8f;
+    color: white;
+    font-weight: 300;
+    border-radius: 5px;
+    padding: 5px 15px;
+    transition: opacity 0.25s;
+}
+
+#gameBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+}
+
+#gameCode {
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 15px #00000026;
+    border-radius: 20px;
+    width: 100%;
+    background-color: white;
+}
+
+#openDashboard {
+    justify-content: left;
+    gap: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 20px;
+    background-color: white;
+    color: black;
+    box-shadow: inset 5px 2px 10px #00000026;
+    transition: all 0.25s;
+} #openDashboard:hover {
+    background-color: #474ead;
+    color: white;
+    box-shadow: 5px 5px 15px #00000026;
+} #openDashboard span {
+    font-size: 20px;
+    font-weight: 200;
+    color: #828494;
+} #openDashboard:hover span {
+    color: white;
+}
+
+#changeCode {
+    aspect-ratio: 1;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 15%;
+}
+
+#card {
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 15px #00000026;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    overflow: hidden;
+    background-color: white;
+}
+
+#letters {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    gap: 3px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#letters div {
+    font-weight: 600;
+    font-size: 25px;
+    padding: 3px;
+    display: flex;
+    border-radius: 5px;
+    color: white;
+    background-color: #474ead;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#numbers {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-weight: 200;
+    font-size: 30px;
+    display: flex;
+    width: 100%;
+    gap: 3px;
+    overflow: hidden;
+}
+
+#numbers div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 100%;
+}
+
+.number {
+    cursor: pointer;
+    display: flex;
+    border-radius: 5px;
+    aspect-ratio: 1;
+    align-items: center;
+    justify-content: center;
+    color: #5d647a;
+    box-shadow: inset 5px 5px 15px #00000026;
+    transition: all 0.25s;
+} .number:hover {
+    background-color: #9a9cac;
+    box-shadow: 5px 5px 15px #00000026;
+    color: white;
+} .number-toggled {
+    background-color: #9a9cac;
+    box-shadow: 5px 5px 15px #00000026;
+    color: white;
+}
+
+#cardBtns {
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 5px 5px 15px #00000026;
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    background-color: white;
+}
+
+.check-card {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.not-yet-bingo {
+    cursor: default;
+    color: black;
+    box-shadow: inset 5px 5px 15px #00000026;
+    background-color: white;
+    font-weight: 300;
+    font-size: 20px;
+} .not-yet-bingo:hover {
+    background-color: white;
+}
+
+.bingo {
+    font-weight: 700;
+    cursor: default;
+    background-color: #209e59;
+} .bingo:hover {
+    background-color: #209e59;
+}
+
+#newCard {
+    aspect-ratio: 1;
+    width: 15%;
+}
