@@ -59,7 +59,7 @@ function newCard() {
     resetBingo();
     if (!$("#card").is(":hidden")) $("#card").hide(250);
     $.ajax({
-        url: `http://www.hyeumine.com/getcard.php?bcode=${gameCode}`,
+        url: `https://www.hyeumine.com/getcard.php?bcode=${gameCode}`,
         method: "GET",
         success: function(data) {
             try {
@@ -90,7 +90,7 @@ function newCard() {
 
 function checkCard() {
     $.ajax({
-        url: `http://www.hyeumine.com/checkwin.php?playcard_token=${playCard.playcard_token}`,
+        url: `https://www.hyeumine.com/checkwin.php?playcard_token=${playCard.playcard_token}`,
         method: "GET",
         success: function(data) {
             if (data === '1') {
@@ -114,7 +114,7 @@ $(document).ready(() => {
         }
     });
     $("#createGame").click(() => {
-        window.open ("http://www.hyeumine.com/bingodashboard.php", "_blank")
+        window.open ("https://www.hyeumine.com/bingodashboard.php", "_blank")
     });
     $("#gameBox").on('click', '.number', function() {
         $(this).toggleClass('number-toggled');
@@ -127,7 +127,7 @@ $(document).ready(() => {
     $("#getCard").click(getCard);
     $("#changeCode").click(changeCode);
     $("#openDashboard").click(() => {
-        window.open (`http://www.hyeumine.com/bingodashboard.php?bcode=${gameCode}`, "_blank");
+        window.open (`https://www.hyeumine.com/bingodashboard.php?bcode=${gameCode}`, "_blank");
     });
     $("#checkCard").click(checkCard);
     $("#newCard").click(newCard);
